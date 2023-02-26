@@ -1,25 +1,18 @@
+<!doctype html>
 <html>
 <head>
-<title>Junha Yang</title>
-<META name="description" content="Junha Yang">
-<META name="keywords" content="Junha Yang">
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=euc-kr">
-<LINK REL="stylesheet" HREF="basic.css" TYPE="text/css">
+  <meta charset="utf-8"/>
+  <title>Junha Yang</title>
 </head>
-<body text="#000000" bgcolor="#FFFFFF" link="#0000EE" vlink="#551A8B" alink="#FF0000">
-<p>
-
-<tr>
-<h1>Junha Yang</h1>
-<ul>
-      A developer.
-</ul>
-
-<hr WIDTH="100%">
-<p>
-<br><a href="files/cv.pdf">My cv</a>
-<br>junhayang1 at gmail
-
+<body>
+  <div id="content"></div>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+     fetch('files/home.md')
+      .then(response => response.text())
+      .then(text => {
+        document.getElementById('content').innerHTML = marked.parse(text);
+      });
+  </script>
 </body>
 </html>
-
