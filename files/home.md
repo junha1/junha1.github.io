@@ -12,7 +12,7 @@ interested in decentralized systems. 😃
 
 ## Education
 
-[2016 - 2023] Pohang University of Science and Technology (POSTECH)
+[2016 - 2023] [Pohang University of Science and Technology (POSTECH)](https://www.postech.ac.kr/)
 
 - B.S. in Computer Science and Engineering
 - Summa Cum Laude (GPA: 4.0/4.3)
