@@ -1,8 +1,6 @@
 # Junha Yang
 
-I am a software engineer with experience in
-leading multiple large scale software projects.
-I am interested in decentralized systems 😃
+I'm a software engineer with experience leading large-scale projects, and a keen interest in decentralized systems 😃
 
 ## Contact
 
@@ -27,7 +25,7 @@ I am interested in decentralized systems 😃
 
 - [2022 - Present] Founder & Lead Developer, [PDAO](https://dao.postech.ac.kr)
 - [2021 - 2022] Infrastructure Team Head, [Hyperithm](https://hyperithm.com)
-- [2019 - 2022] Software Engineer, [Kodebox](https://kodebox.io/)
+- [2019 - 2021] Software Engineer, [Kodebox](https://kodebox.io/)
 - [2018] AI Research Intern, [Netmarble](https://www.netmarble.net/)
 
 ## Projects
@@ -60,6 +58,7 @@ I am interested in decentralized systems 😃
   1](https://youtu.be/4Ykkwo-GPCg)
 
 ### 2020
+
 - [CodeChain
   Foundry](https://medium.com/codechain/codechain-foundry-8c6df5e08c82)
 - [remote-trait-object: One of CodeChain Foundry’s core inter-module
