@@ -2,6 +2,8 @@
 
 I'm a software engineer with experience leading large-scale projects, and a keen interest in decentralized systems 😃
 
+last edited: 2023-02-28
+
 ## Contact
 
 - Email: `junhayang1@gmail.com`
