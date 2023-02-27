@@ -1,7 +1,8 @@
 # Junha Yang
 
-I am a software engineer with experience in leading a software project. I am
-interested in decentralized systems. 😃
+I am a software engineer with experience in
+leading multiple large scale software projects.
+I am interested in decentralized systems 😃
 
 ## Contact
 
