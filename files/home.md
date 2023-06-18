@@ -11,6 +11,15 @@ last edited: 2023-02-28
 - Telegram: [@junha1](https://t.me/junha1)
 - Github: [junha1](https://github.com/junha1)
 
+
+## Work Experiences
+
+- [2023 - Present] CTO, [Hyperithm](https://hyperithm.com)
+- [2022 - Present] Founder & Lead Developer, [PDAO](https://dao.postech.ac.kr)
+- [2021 - 2022] Infrastructure Team Head, [Hyperithm](https://hyperithm.com)
+- [2019 - 2021] Software Engineer, [Kodebox](https://kodebox.io/)
+- [2018] AI Research Intern, [Netmarble](https://www.netmarble.net/)
+
 ## Education
 
 [2016 - 2023] [Pohang University of Science and Technology (POSTECH)](https://www.postech.ac.kr/)
@@ -22,13 +31,6 @@ last edited: 2023-02-28
 
 - Rust, Modern C++, Python, OpenGL
 - Blockchain, Consensus, DAO, Networks
-
-## Work Experiences
-
-- [2022 - Present] Founder & Lead Developer, [PDAO](https://dao.postech.ac.kr)
-- [2021 - 2022] Infrastructure Team Head, [Hyperithm](https://hyperithm.com)
-- [2019 - 2021] Software Engineer, [Kodebox](https://kodebox.io/)
-- [2018] AI Research Intern, [Netmarble](https://www.netmarble.net/)
 
 ## Projects
 
