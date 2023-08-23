@@ -81,7 +81,7 @@ last edited: 2023-08-24
 ## Miscs
 
 - [2023] Lead mentor, [OSSCA 2023](https://www.contribution.ac/), Ministry of
-  Science and ICT.
+  Science and ICT
 - [2022] Park Tae-joon Alumni Scholarship, POSTECHIAN Foundation
 - [2020] Contibutor, the Cosmos IBC protocol specification
 - [2017] President, Hanuliman the orchestra club in POSTECH
