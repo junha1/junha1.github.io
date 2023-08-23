@@ -1,8 +1,9 @@
 # Junha Yang
 
-I'm a software engineer with experience leading large-scale projects, and a keen interest in decentralized systems 😃
+I'm a software engineer with experience leading large-scale projects, and a keen
+interest in decentralized systems 😃
 
-last edited: 2023-06-19
+last edited: 2023-08-24
 
 ## Contact
 
@@ -18,11 +19,12 @@ last edited: 2023-06-19
 - [2022 - Present] Founder & Lead Developer, [PDAO](https://dao.postech.ac.kr)
 - [2021 - 2022] Infrastructure Team Head, [Hyperithm](https://hyperithm.com)
 - [2019 - 2021] Software Engineer, [Kodebox](https://kodebox.io/)
-- [2018] AI Research Intern, [Netmarble](https://www.netmarble.net/)
+- [2018] AI Researcher, [Netmarble](https://www.netmarble.net/)
 
 ## Education
 
-[2016 - 2023] [Pohang University of Science and Technology (POSTECH)](https://www.postech.ac.kr/)
+[2016 - 2023] [Pohang University of Science and Technology
+(POSTECH)](https://www.postech.ac.kr/)
 
 - B.S. in Computer Science and Engineering
 - Summa Cum Laude (GPA: 4.0/4.3)
@@ -47,6 +49,8 @@ last edited: 2023-06-19
 
 ### 2023
 
+- [Speaker at "웹 3.0과 프라이버시 및 DAO 운영의 법률적 검토
+  세미나"](https://event-us.kr/coindeskkorea/event/69558?fbclid=IwAR1W1j0x1tk0yrA96aSZGaJ0oLsbTLoA77hcF8gGL2IpWEvNHMBaUx4Xm0M)
 - [Discussion panel at Deference 2023](https://www.deference.co.kr/)
 - [PDAO Seminar: DAO \& Simperby](https://youtu.be/dZ8A0Sgq5Q8)
 
@@ -76,8 +80,10 @@ last edited: 2023-06-19
 
 ## Miscs
 
+- [2023] Lead mentor, [OSSCA 2023](https://www.contribution.ac/), Ministry of
+  Science and ICT.
 - [2022] Park Tae-joon Alumni Scholarship, POSTECHIAN Foundation
-- [2020] Contibutor to the specification of the Cosmos IBC protocol
-- [2017] President of Hanulim, an orchestra club in POSTECH
-- [2015] National team for the International Science and Engineering Fair (ISEF)
-- [2014] Korean Olympiad in Informatics (KOI), Gold Award (2nd)
+- [2020] Contibutor, the Cosmos IBC protocol specification
+- [2017] President, Hanuliman the orchestra club in POSTECH
+- [2015] National team, International Science and Engineering Fair (ISEF)
+- [2014] Gold Award (2nd), Korean Olympiad in Informatics (KOI)
