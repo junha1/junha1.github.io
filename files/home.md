@@ -3,7 +3,7 @@
 I'm a software engineer with experience leading large-scale projects, and a keen
 interest in decentralized systems 😃
 
-last edited: 2023-08-24
+last edited: 2024-10-24
 
 ## Contact
 
@@ -11,7 +11,6 @@ last edited: 2023-08-24
 - Homepage: [https://junha1.github.io/](https://junha1.github.io/)
 - Telegram: [@junha1](https://t.me/junha1)
 - Github: [junha1](https://github.com/junha1)
-
 
 ## Work Experiences
 
@@ -47,11 +46,16 @@ last edited: 2023-08-24
 
 ## Postings & Talks
 
+### 2024
+
+- Discussion panel at [Ethcon Korea 2024](https://2024.ethcon.kr/)
+- Speaker at [Crypto United Trading Conference](https://lu.ma/jg1vpimt) | [Slides](https://docs.google.com/presentation/d/1iYd_cXJdAm77zsuI7cNLcnMsIJFRB8_5iISkScp6wh8/edit#slide=id.g2720ced5208_0_0)
+
 ### 2023
 
-- [Speaker at "웹 3.0과 프라이버시 및 DAO 운영의 법률적 검토
+- Speaker at ["웹 3.0과 프라이버시 및 DAO 운영의 법률적 검토
   세미나"](https://event-us.kr/coindeskkorea/event/69558?fbclid=IwAR1W1j0x1tk0yrA96aSZGaJ0oLsbTLoA77hcF8gGL2IpWEvNHMBaUx4Xm0M)
-- [Discussion panel at Deference 2023](https://www.deference.co.kr/)
+- Discussion panel at [Deference 2023](https://www.deference.co.kr/)
 - [PDAO Seminar: DAO \& Simperby](https://youtu.be/dZ8A0Sgq5Q8)
 
 ### 2022
