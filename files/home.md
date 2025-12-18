@@ -4,7 +4,7 @@ Seasoned software engineer, team lead, and administrator.
 Open to any role, domain, or challenge.
 I embrace rapid technological transformation and challenge conventional paradigms to drive innovation 😃
 
-last edited: 2025-07-20
+last edited: 2025-12-18
 
 ## Contact
 
@@ -16,7 +16,7 @@ last edited: 2025-07-20
 
 ## Work Experiences
 
-- [2023 - Present] CTO, [Hyperithm](https://hyperithm.com)
+- [2023 - 2026] CTO, [Hyperithm](https://hyperithm.com)
 - [2022 - 2024] Founder & Lead Developer, [PDAO](https://dao.postech.ac.kr)
 - [2021 - 2022] Infrastructure Team Head, [Hyperithm](https://hyperithm.com)
 - [2019 - 2021] Software Engineer, [Kodebox](https://kodebox.io/)
