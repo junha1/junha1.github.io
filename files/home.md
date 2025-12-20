@@ -1,6 +1,6 @@
 # Junha Yang
 
-Seasoned software engineer, team lead, and administrator.
+A software engineer, team lead, and administrator.
 Open to any role, domain, or challenge.
 I embrace rapid technological transformation and challenge conventional paradigms to drive innovation 😃
 
