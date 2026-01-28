@@ -4,7 +4,7 @@ A software engineer, team lead, and administrator.
 Open to any role, domain, or challenge.
 I embrace rapid technological transformation and challenge conventional paradigms to drive innovation 😃
 
-last edited: 2025-12-18
+last edited: 2026-01-29
 
 ## Contact
 
@@ -47,6 +47,10 @@ last edited: 2025-12-18
   top of OpenGL.
 
 ## Postings & Talks
+
+### 2026
+
+- [CTO의 챌린지](https://tech.hyperithm.com/cto-challenges)
 
 ### 2025
 
