@@ -20,7 +20,7 @@
     }
 
     :root {
-      --bg: #f2efe8;
+      --bg: #eeeadf;
       --ink: #111;
       --ink-2: #555;
       --ink-3: #999;
@@ -285,7 +285,7 @@
     /* year markers */
     h3 {
       font-family: var(--serif);
-      font-size: 22px;
+      font-size: 16px;
       font-weight: 400;
       font-style: italic;
       color: var(--ink);
@@ -345,7 +345,7 @@
 
     /* ===== EDUCATION ===== */
     .edu {
-      border-left: 4px solid var(--blue);
+      border-left: 4px solid var(--red);
       padding: 12px 16px;
       background: rgba(0, 0, 0, 0.03);
       font-size: 13px;
@@ -504,28 +504,60 @@
     /* ===== COLOPHON ===== */
     .colophon {
       margin-top: 56px;
-      padding: 20px;
       background: var(--ink);
       color: var(--bg);
       position: relative;
+      overflow: hidden;
     }
 
-    .colophon::before {
-      content: "※";
-      position: absolute;
-      top: -12px;
-      right: 20px;
-      font-size: 16px;
-      color: var(--lime);
-      background: var(--ink);
-      padding: 0 6px;
+    .colophon .marquee-wrap {
+      overflow: hidden;
+      border-bottom: 1px solid #222;
     }
 
-    .colophon .f-top {
+    .colophon .marquee {
+      display: flex;
+      white-space: nowrap;
+      animation: marquee 20s linear infinite;
+    }
+
+    .colophon .marquee span {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 48px;
+      line-height: 1.2;
+      padding: 12px 0;
+      color: transparent;
+      -webkit-text-stroke: 1px #333;
+      flex-shrink: 0;
+      letter-spacing: -1px;
+    }
+
+    .colophon .marquee span .accent {
+      -webkit-text-stroke-color: var(--red);
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .colophon .f-body {
+      padding: 16px 20px;
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 10px;
+      align-items: center;
+    }
+
+    .colophon .f-left {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
     }
 
     .colophon .f-copy {
@@ -535,37 +567,28 @@
       text-transform: uppercase;
     }
 
+    .colophon .f-sub {
+      font-family: var(--mono);
+      font-size: 9px;
+      color: #555;
+    }
+
+    .colophon .f-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
     .colophon .f-loc {
       font-family: var(--serif);
       font-style: italic;
-      font-size: 15px;
+      font-size: 14px;
       color: var(--lime);
     }
 
-    .colophon .f-line {
-      height: 1px;
-      background: #333;
-      margin-bottom: 10px;
-    }
-
-    .colophon .f-bottom {
-      font-family: var(--mono);
-      font-size: 9px;
-      color: #666;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .colophon .f-bottom .pulse {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .colophon .f-bottom .pulse::before {
-      content: "";
-      width: 5px;
-      height: 5px;
+    .colophon .pulse-dot {
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
       background: var(--lime);
       animation: pulse 2s ease-in-out infinite;
@@ -854,14 +877,25 @@
     </section>
 
     <div class="colophon">
-      <div class="f-top">
-        <span class="f-copy">&copy; 2026 Junha Yang</span>
-        <span class="f-loc">Seoul, KR ✦</span>
+      <div class="marquee-wrap">
+        <div class="marquee">
+          <span>Junha Yang <span class="accent">✦</span> Seoul, KR <span class="accent">✦</span> Everything is an
+            illusion <span class="accent">✦</span> Junha Yang <span class="accent">✦</span> Seoul, KR <span
+              class="accent">✦</span> Everything is an illusion <span class="accent">✦</span>&nbsp;</span><span>Junha
+            Yang <span class="accent">✦</span> Seoul, KR <span class="accent">✦</span> Everything is an illusion <span
+              class="accent">✦</span> Junha Yang <span class="accent">✦</span> Seoul, KR <span class="accent">✦</span>
+            Everything is an illusion <span class="accent">✦</span>&nbsp;</span>
+        </div>
       </div>
-      <div class="f-line"></div>
-      <div class="f-bottom">
-        <span>Everything is an illusion</span>
-        <span class="pulse">Online</span>
+      <div class="f-body">
+        <div class="f-left">
+          <span class="f-copy">&copy; 2026 Junha Yang</span>
+          <span class="f-sub">Everything is an illusion</span>
+        </div>
+        <div class="f-right">
+          <span class="f-loc">Seoul</span>
+          <span class="pulse-dot"></span>
+        </div>
       </div>
     </div>
 
