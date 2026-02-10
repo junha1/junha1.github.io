@@ -4,7 +4,7 @@ A software engineer, team lead, and administrator.
 Open to any role, domain, or challenge.
 I embrace rapid technological transformation and challenge conventional paradigms to drive innovation 😃
 
-last edited: 2026-01-29
+last edited: 2026-02-10
 
 ## Contact
 
@@ -35,26 +35,16 @@ last edited: 2026-01-29
 - Rust, Blockchain, Consensus, Security, LLM Agent, Vibe Coding, Systems Administration, HR
 - AGI, Euthanasia, Cosmic Void, Frutiger Aero, Music
 
-## Open-Source Projects
-
-- [Simperby](https://github.com/postech-dao/simperby): A blockchain engine for
-  DAOs.
-- [CodeChain Foundry](https://github.com/CodeChain-io/foundry): A blockchain
-  engine based on Tendermint and Rust, inspired by Cosmos SDK.
-- [remote-trait-object](https://github.com/CodeChain-io/remote-trait-object): A
-  Rust library for remote method invocation based on trait objects.
-- [fere](https://github.com/rsbm/fere): A realtime 3D rendering engine built on
-  top of OpenGL.
-
 ## Postings & Talks
 
 ### 2026
 
+- [[삼일회계법인 투자리더십포럼] 새로운 세상을 바라보기: 암호화폐와 AI](https://docs.google.com/presentation/d/1UoZ8eXFKDCnQK2VLQwF8B4apy7S-OiJsaMteveWthp8/edit?slide=id.g36bd1584053_0_63#slide=id.g36bd1584053_0_63)
 - [CTO의 챌린지](https://tech.hyperithm.com/cto-challenges)
 
 ### 2025
 
-- [기술이 세상을 바꾸는 방식: 블록체인과 탈중앙화](https://docs.google.com/presentation/d/1JCS3DpuiXw9pbe1AYBLF9P1GqYuM28fWwCbS2jfDWek/edit?usp=sharing)
+- [[서울대 경영학과 동문회] 기술이 세상을 바꾸는 방식: 블록체인과 탈중앙화](https://docs.google.com/presentation/d/1JCS3DpuiXw9pbe1AYBLF9P1GqYuM28fWwCbS2jfDWek/edit?usp=sharing)
 
 ### 2024
 
@@ -88,6 +78,17 @@ last edited: 2026-01-29
 - [Blockchain Light
   Client](https://medium.com/codechain/blockchain-light-client-1171dfa1269a)
 - [IBC and ICS](https://medium.com/codechain/ibc-and-ics-116e636e57aa)
+
+## Open-Source Projects
+
+- [Simperby](https://github.com/postech-dao/simperby): A blockchain engine for
+  DAOs.
+- [CodeChain Foundry](https://github.com/CodeChain-io/foundry): A blockchain
+  engine based on Tendermint and Rust, inspired by Cosmos SDK.
+- [remote-trait-object](https://github.com/CodeChain-io/remote-trait-object): A
+  Rust library for remote method invocation based on trait objects.
+- [fere](https://github.com/rsbm/fere): A realtime 3D rendering engine built on
+  top of OpenGL.
 
 ## Miscellaneous
 

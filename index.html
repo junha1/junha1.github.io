@@ -1,18 +1,740 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Junha Yang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #f2efe8;
+      --ink: #111;
+      --ink-2: #555;
+      --ink-3: #999;
+      --rule: #d6d2ca;
+      --blue: #1400ff;
+      --red: #ff2a00;
+      --lime: #c8ff00;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'Space Grotesk', sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--ink);
+      font-size: 14px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      position: relative;
+    }
+
+    /* grain */
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    ::selection {
+      background: var(--red);
+      color: var(--bg);
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+      border-bottom: 1.5px solid var(--blue);
+      transition: background 0.1s, color 0.1s;
+    }
+    a:hover {
+      background: var(--blue);
+      color: var(--bg);
+    }
+
+    .page {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 80px 24px 96px;
+      position: relative;
+    }
+
+    /* ===== FLOATING STARS ===== */
+    .star {
+      position: fixed;
+      font-size: 24px;
+      color: var(--red);
+      pointer-events: none;
+      z-index: 10;
+    }
+    .star-1 {
+      top: 32px;
+      right: 32px;
+      animation: spin 20s linear infinite;
+    }
+    .star-2 {
+      bottom: 32px;
+      left: 32px;
+      font-size: 14px;
+      animation: spin 30s linear infinite reverse;
+      opacity: 0.4;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* ===== MARGIN NOTE ===== */
+    .margin-note {
+      position: absolute;
+      right: -140px;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 12px;
+      color: var(--red);
+      opacity: 0.5;
+      writing-mode: vertical-rl;
+      letter-spacing: 1px;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      margin-bottom: 56px;
+      position: relative;
+    }
+
+    .hero .num {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--ink-3);
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: 76px;
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: -2.5px;
+      line-height: 0.92;
+      color: var(--ink);
+      position: relative;
+    }
+
+    .hero h1 .ghost {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      color: transparent;
+      -webkit-text-stroke: 1px var(--rule);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .hero .rule {
+      display: block;
+      width: 100%;
+      height: 4px;
+      background: var(--ink);
+      margin: 18px 0 14px;
+      position: relative;
+    }
+
+    .hero .rule::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 48px;
+      height: 4px;
+      background: var(--red);
+    }
+
+    .hero .bio {
+      font-size: 14px;
+      color: var(--ink-2);
+      line-height: 1.65;
+      max-width: 480px;
+    }
+
+    .hero .bio mark {
+      background: var(--lime);
+      color: var(--ink);
+      padding: 0 4px;
+      font-weight: 600;
+    }
+
+    .hero .stamp {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--ink-3);
+      margin-top: 16px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact-bar {
+      background: var(--ink);
+      color: var(--bg);
+      font-family: var(--mono);
+      font-size: 11px;
+      padding: 12px 16px;
+      margin-bottom: 56px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 18px;
+      position: relative;
+    }
+
+    .contact-bar::before {
+      content: "✦ CONNECT";
+      position: absolute;
+      top: -9px;
+      left: 16px;
+      font-family: var(--mono);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--red);
+      background: var(--bg);
+      padding: 0 6px;
+    }
+
+    .contact-bar a {
+      color: var(--lime);
+      border-bottom: 1px solid rgba(200, 255, 0, 0.25);
+    }
+    .contact-bar a:hover {
+      background: var(--lime);
+      color: var(--ink);
+    }
+    .contact-bar .sep { color: #444; }
+
+    /* ===== SECTIONS ===== */
+    section { margin-bottom: 48px; position: relative; }
+
+    .sh {
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--ink);
+      border-top: 2.5px solid var(--ink);
+      padding-top: 8px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .sh .deco {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--red);
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .sh .idx {
+      font-family: var(--mono);
+      font-size: 9px;
+      font-weight: 400;
+      color: var(--ink-3);
+      letter-spacing: 0;
+      text-transform: none;
+      margin-left: 8px;
+    }
+
+    /* year markers */
+    h3 {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--ink);
+      margin-top: 24px;
+      margin-bottom: 8px;
+      position: relative;
+      display: inline-block;
+    }
+
+    h3::after {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 2px;
+      background: var(--red);
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+
+    h3:first-of-type { margin-top: 0; }
+
+    /* ===== ROWS ===== */
+    .r {
+      display: flex;
+      gap: 16px;
+      align-items: baseline;
+      padding: 7px 0;
+      font-size: 13px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .r:last-child { border-bottom: none; }
+
+    .r .d {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--ink-3);
+      min-width: 74px;
+      flex-shrink: 0;
+    }
+    .r .d.sm { min-width: 36px; }
+
+    .r .t { color: var(--ink); }
+    .r .t b { font-weight: 700; }
+
+    /* ===== EDUCATION ===== */
+    .edu {
+      border-left: 4px solid var(--blue);
+      padding: 12px 16px;
+      background: rgba(0,0,0,0.03);
+      font-size: 13px;
+      position: relative;
+    }
+
+    .edu::after {
+      content: "4.0";
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 36px;
+      color: var(--ink);
+      opacity: 0.06;
+      line-height: 1;
+    }
+
+    .edu .yr {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--ink-3);
+    }
+
+    .edu .school {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 400;
+      margin-top: 2px;
+    }
+    .edu .school a {
+      color: var(--ink);
+      border-bottom-color: var(--ink);
+    }
+
+    .edu ul {
+      list-style: none;
+      margin-top: 8px;
+    }
+    .edu ul li {
+      color: var(--ink-2);
+      padding: 1px 0;
+    }
+    .edu ul li::before {
+      content: "→ ";
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--blue);
+    }
+
+    /* ===== SKILLS ===== */
+    .skills {
+      font-family: var(--mono);
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      line-height: 1.8;
+      color: var(--ink);
+    }
+
+    .skills .hi {
+      background: var(--lime);
+      padding: 1px 5px;
+    }
+
+    .skills .sub {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 15px;
+      color: var(--ink-3);
+      display: block;
+      margin-top: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    /* ===== TALKS ===== */
+    .talk {
+      padding: 5px 0;
+      font-size: 13px;
+      line-height: 1.5;
+      border-bottom: 1px solid var(--rule);
+    }
+    .talk:last-child { border-bottom: none; }
+
+    .talk .pre {
+      color: var(--ink-3);
+      font-size: 12px;
+    }
+
+    .talk .etc {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--ink-3);
+    }
+
+    /* ===== PROJECTS ===== */
+    .proj-list .proj-row {
+      display: flex;
+      gap: 12px;
+      align-items: baseline;
+      padding: 5px 0;
+      font-size: 13px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .proj-list .proj-row:last-child { border-bottom: none; }
+
+    .proj-list .pn {
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 700;
+      min-width: 150px;
+      flex-shrink: 0;
+    }
+
+    .proj-list .pd {
+      color: var(--ink-2);
+    }
+
+    /* ===== COLOPHON ===== */
+    .colophon {
+      margin-top: 56px;
+      padding: 20px;
+      background: var(--ink);
+      color: var(--bg);
+      position: relative;
+    }
+
+    .colophon::before {
+      content: "※";
+      position: absolute;
+      top: -12px;
+      right: 20px;
+      font-size: 16px;
+      color: var(--lime);
+      background: var(--ink);
+      padding: 0 6px;
+    }
+
+    .colophon .f-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 10px;
+    }
+
+    .colophon .f-copy {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .colophon .f-loc {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 15px;
+      color: var(--lime);
+    }
+
+    .colophon .f-line {
+      height: 1px;
+      background: #333;
+      margin-bottom: 10px;
+    }
+
+    .colophon .f-bottom {
+      font-family: var(--mono);
+      font-size: 9px;
+      color: #666;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .colophon .f-bottom .pulse {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .colophon .f-bottom .pulse::before {
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--lime);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 840px) {
+      .margin-note { display: none; }
+    }
+
+    @media (max-width: 600px) {
+      .page { padding: 48px 16px 64px; }
+      .hero h1 { font-size: 52px; letter-spacing: -1.5px; }
+      .hero h1 .ghost { display: none; }
+      .r { flex-direction: column; gap: 1px; }
+      .proj-list .proj-row { flex-direction: column; gap: 2px; }
+      .contact-bar { flex-direction: column; gap: 4px; }
+      .skills { font-size: 14px; }
+      .star-1 { top: 16px; right: 16px; font-size: 18px; }
+      .star-2 { bottom: 16px; left: 16px; font-size: 10px; }
+      h3 { font-size: 18px; }
+    }
+  </style>
 </head>
 <body>
-  <div id="content"></div>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script>
-     fetch('files/home.md')
-      .then(response => response.text())
-      .then(text => {
-        document.getElementById('content').innerHTML = marked.parse(text);
-      });
-  </script>
+  <span class="star star-1">✦</span>
+  <span class="star star-2">✦</span>
+  <div class="page">
+
+    <span class="margin-note" style="top: 100px;">yang junha — 양준하</span>
+
+    <div class="hero">
+      <span class="num">001 / ∞</span>
+      <h1>
+        Junha<br>Yang
+        <span class="ghost" aria-hidden="true">Junha<br>Yang</span>
+      </h1>
+      <span class="rule"></span>
+      <p class="bio">
+        <mark>Software engineer</mark>, team lead, and administrator.
+        Open to any role, domain, or challenge.
+        I embrace rapid technological transformation and challenge conventional paradigms to drive innovation.
+      </p>
+      <div class="stamp">Last edited — 2026.02.10</div>
+    </div>
+
+    <div class="contact-bar">
+      <span>junhayang1@gmail.com</span>
+      <span class="sep">/</span>
+      <a href="https://junha1.github.io/">web</a>
+      <span class="sep">/</span>
+      <a href="https://t.me/junha1">telegram</a>
+      <span class="sep">/</span>
+      <a href="https://www.linkedin.com/in/junha-y-5923061b6/">linkedin</a>
+      <span class="sep">/</span>
+      <a href="https://github.com/junha1">github</a>
+    </div>
+
+    <section>
+      <div class="sh">Work Experiences<span class="idx">01</span> <span class="deco">career</span></div>
+      <div class="r">
+        <span class="d">2023–2026</span>
+        <span class="t"><b>CTO and CISO</b>, <a href="https://hyperithm.com">Hyperithm</a></span>
+      </div>
+      <div class="r">
+        <span class="d">2022–2024</span>
+        <span class="t"><b>Founder &amp; Lead Dev</b>, <a href="https://dao.postech.ac.kr">PDAO</a></span>
+      </div>
+      <div class="r">
+        <span class="d">2021–2022</span>
+        <span class="t"><b>Infra Team Head</b>, <a href="https://hyperithm.com">Hyperithm</a></span>
+      </div>
+      <div class="r">
+        <span class="d">2019–2021</span>
+        <span class="t"><b>Software Engineer</b>, <a href="https://kodebox.io/">Kodebox</a></span>
+      </div>
+      <div class="r">
+        <span class="d">2018</span>
+        <span class="t"><b>AI Researcher</b>, <a href="https://www.netmarble.net/">Netmarble</a></span>
+      </div>
+    </section>
+
+    <section>
+      <div class="sh">Education<span class="idx">02</span> <span class="deco">alma mater</span></div>
+      <div class="edu">
+        <span class="yr">2016–2023</span>
+        <div class="school"><a href="https://www.postech.ac.kr/">POSTECH</a></div>
+        <ul>
+          <li>B.S. in Computer Science and Engineering</li>
+          <li>Summa Cum Laude (GPA: 4.0 / 4.3)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="sh">Skills &amp; Interests<span class="idx">03</span> <span class="deco">things I care about</span></div>
+      <div class="skills">
+        <span class="hi">Rust</span> · Blockchain · Consensus · Security · <span class="hi">LLM Agent</span> · Vibe Coding · SysAdmin · HR
+        <span class="sub">AGI · Euthanasia · Cosmic Void · Frutiger Aero · Music</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="sh">Postings &amp; Talks<span class="idx">04</span> <span class="deco">public</span></div>
+
+      <h3>2026</h3>
+      <div class="talk">
+        <a href="https://docs.google.com/presentation/d/1UoZ8eXFKDCnQK2VLQwF8B4apy7S-OiJsaMteveWthp8/edit?slide=id.g36bd1584053_0_63#slide=id.g36bd1584053_0_63">[삼일회계법인] 새로운 세상을 바라보기: 암호화폐와 AI</a>
+      </div>
+      <div class="talk">
+        <a href="https://tech.hyperithm.com/cto-challenges">CTO의 챌린지</a>
+      </div>
+
+      <h3>2025</h3>
+      <div class="talk">
+        <a href="https://docs.google.com/presentation/d/1JCS3DpuiXw9pbe1AYBLF9P1GqYuM28fWwCbS2jfDWek/edit?usp=sharing">[서울대 경영학과 동문회] 기술이 세상을 바꾸는 방식: 블록체인과 탈중앙화</a>
+      </div>
+
+      <h3>2024</h3>
+      <div class="talk">
+        <span class="pre">Panel —</span> <a href="https://2024.ethcon.kr/">Ethcon Korea 2024</a>
+      </div>
+      <div class="talk">
+        <span class="pre">Speaker —</span> <a href="https://lu.ma/jg1vpimt">Crypto United Trading Conference</a> <span class="etc">[ <a href="https://docs.google.com/presentation/d/1iYd_cXJdAm77zsuI7cNLcnMsIJFRB8_5iISkScp6wh8/edit#slide=id.g2720ced5208_0_0">slides</a> ]</span>
+      </div>
+
+      <h3>2023</h3>
+      <div class="talk">
+        <span class="pre">Speaker —</span> <a href="https://event-us.kr/coindeskkorea/event/69558?fbclid=IwAR1W1j0x1tk0yrA96aSZGaJ0oLsbTLoA77hcF8gGL2IpWEvNHMBaUx4Xm0M">웹 3.0과 프라이버시 및 DAO 운영의 법률적 검토 세미나</a>
+      </div>
+      <div class="talk">
+        <span class="pre">Panel —</span> <a href="https://www.deference.co.kr/">Deference 2023</a>
+      </div>
+      <div class="talk">
+        <a href="https://youtu.be/dZ8A0Sgq5Q8">[PDAO 세미나] DAO &amp; Simperby</a>
+      </div>
+
+      <h3>2022</h3>
+      <div class="talk">
+        <a href="https://youtu.be/q8DRBNuxXWA">PDAO 메인넷 제네시스 기념행사</a>
+      </div>
+      <div class="talk">
+        <a href="https://youtu.be/H1TYxoHzwTo">[포스텍 테크리뷰] 블록체인과 탈중앙화 미래</a>
+      </div>
+      <div class="talk">
+        <a href="https://youtu.be/2rgHBIlfI7M">[PDAO 세미나] PoS &amp; BFT</a>
+      </div>
+      <div class="talk">
+        <a href="https://youtu.be/gNVTR5sH-VQ">[PDAO 세미나] 블록체인 입문 - 2부</a>
+      </div>
+      <div class="talk">
+        <a href="https://youtu.be/4Ykkwo-GPCg">[PDAO 세미나] 블록체인 입문 - 1부</a>
+      </div>
+
+      <h3>2020</h3>
+      <div class="talk">
+        <a href="https://medium.com/codechain/codechain-foundry-8c6df5e08c82">CodeChain Foundry</a>
+      </div>
+      <div class="talk">
+        <a href="https://medium.com/codechain/remote-trait-object-one-of-codechain-foundrys-core-inter-module-communication-systems-66879938b855">remote-trait-object: CodeChain Foundry's core inter-module communication systems</a>
+      </div>
+      <div class="talk">
+        <a href="https://medium.com/codechain/foundry-ics-poc-proof-of-concept-implementation-c92a8b4757da">CodeChain Foundry ICS Implementation</a>
+      </div>
+      <div class="talk">
+        <a href="https://medium.com/codechain/blockchain-light-client-1171dfa1269a">Blockchain Light Client</a>
+      </div>
+      <div class="talk">
+        <a href="https://medium.com/codechain/ibc-and-ics-116e636e57aa">IBC and ICS</a>
+      </div>
+    </section>
+
+    <section>
+      <div class="sh">Open-Source<span class="idx">05</span> <span class="deco">code</span></div>
+      <div class="proj-list">
+        <div class="proj-row">
+          <span class="pn"><a href="https://github.com/postech-dao/simperby">Simperby</a></span>
+          <span class="pd">A blockchain engine for DAOs.</span>
+        </div>
+        <div class="proj-row">
+          <span class="pn"><a href="https://github.com/CodeChain-io/foundry">CodeChain Foundry</a></span>
+          <span class="pd">Blockchain engine on Tendermint + Rust, inspired by Cosmos SDK.</span>
+        </div>
+        <div class="proj-row">
+          <span class="pn"><a href="https://github.com/CodeChain-io/remote-trait-object">remote-trait-object</a></span>
+          <span class="pd">Rust remote method invocation via trait objects.</span>
+        </div>
+        <div class="proj-row">
+          <span class="pn"><a href="https://github.com/rsbm/fere">fere</a></span>
+          <span class="pd">Realtime 3D rendering engine on OpenGL.</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sh">Miscellaneous<span class="idx">06</span> <span class="deco">etc</span></div>
+      <div class="r">
+        <span class="d sm">2023</span>
+        <span class="t">Lead mentor, <a href="https://www.contribution.ac/">OSSCA 2023</a> — Ministry of Science and ICT</span>
+      </div>
+      <div class="r">
+        <span class="d sm">2022</span>
+        <span class="t">Park Tae-joon Alumni Scholarship, POSTECHIAN Foundation</span>
+      </div>
+      <div class="r">
+        <span class="d sm">2020</span>
+        <span class="t">Contributor, Cosmos IBC protocol specification</span>
+      </div>
+      <div class="r">
+        <span class="d sm">2017</span>
+        <span class="t">President, POSTECH Orchestra Club 'Hanulim'</span>
+      </div>
+      <div class="r">
+        <span class="d sm">2015</span>
+        <span class="t">South Korean National Team, Intel ISEF 2015</span>
+      </div>
+      <div class="r">
+        <span class="d sm">2014</span>
+        <span class="t">Gold Award (2nd), Korean Olympiad in Informatics</span>
+      </div>
+    </section>
+
+    <div class="colophon">
+      <div class="f-top">
+        <span class="f-copy">&copy; 2026 Junha Yang</span>
+        <span class="f-loc">Seoul, KR ✦</span>
+      </div>
+      <div class="f-line"></div>
+      <div class="f-bottom">
+        <span>Built with bare hands</span>
+        <span class="pulse">Online</span>
+      </div>
+    </div>
+
+  </div>
 </body>
 </html>
