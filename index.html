@@ -416,14 +416,27 @@
     }
 
     .skills .sub {
+      display: block;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--rule);
       font-family: var(--serif);
       font-style: italic;
       font-weight: 400;
       font-size: 15px;
-      color: var(--ink-3);
-      display: block;
-      margin-top: 6px;
+      color: var(--ink);
       letter-spacing: 0.5px;
+    }
+
+    .skills .sub-label {
+      font-family: var(--mono);
+      font-style: normal;
+      font-size: 9px;
+      font-weight: 700;
+      color: var(--red);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-right: 8px;
     }
 
     /* ===== TALKS ===== */
@@ -703,9 +716,10 @@
       <div class="sh"><span>Skills &amp; Interests<span class="idx">03</span></span> <span class="deco">things I care
           about</span></div>
       <div class="skills">
-        <span class="hi">Rust</span> · Blockchain · Consensus · Security · <span class="hi">LLM Agent</span> · Vibe
-        Coding · Systems Administration · HR
-        <span class="sub">AGI · Euthanasia · Cosmic Void · Frutiger Aero · Music</span>
+        Rust · <span class="hi">Blockchain</span> · Consensus · <span class="hi">Security</span> · <span class="hi">LLM
+          Agent</span> · Vibe Coding · Systems Administration · HR
+        <span class="sub"><span class="sub-label">Also into</span>AGI · Euthanasia · Cosmic Void · Frutiger Aero ·
+          Music</span>
       </div>
     </section>
 
@@ -715,7 +729,8 @@
 
       <h3>2026</h3>
       <div class="talk">
-        [삼일회계법인 투자리더십포럼] 새로운 세상을 바라보기: 암호화폐와 AI<a class="talk-link" href="https://docs.google.com/presentation/d/1UoZ8eXFKDCnQK2VLQwF8B4apy7S-OiJsaMteveWthp8/edit?slide=id.g36bd1584053_0_63#slide=id.g36bd1584053_0_63">↗</a>
+        [삼일회계법인 투자리더십포럼] 새로운 세상을 바라보기: 암호화폐와 AI<a class="talk-link"
+          href="https://docs.google.com/presentation/d/1UoZ8eXFKDCnQK2VLQwF8B4apy7S-OiJsaMteveWthp8/edit?slide=id.g36bd1584053_0_63#slide=id.g36bd1584053_0_63">↗</a>
       </div>
       <div class="talk">
         CTO의 챌린지<a class="talk-link" href="https://tech.hyperithm.com/cto-challenges">↗</a>
@@ -723,7 +738,8 @@
 
       <h3>2025</h3>
       <div class="talk">
-        [서울대 경영학과 동문회] 기술이 세상을 바꾸는 방식: 블록체인과 탈중앙화<a class="talk-link" href="https://docs.google.com/presentation/d/1JCS3DpuiXw9pbe1AYBLF9P1GqYuM28fWwCbS2jfDWek/edit?usp=sharing">↗</a>
+        [서울대 경영학과 동문회] 기술이 세상을 바꾸는 방식: 블록체인과 탈중앙화<a class="talk-link"
+          href="https://docs.google.com/presentation/d/1JCS3DpuiXw9pbe1AYBLF9P1GqYuM28fWwCbS2jfDWek/edit?usp=sharing">↗</a>
       </div>
 
       <h3>2024</h3>
@@ -731,12 +747,15 @@
         <span class="pre">Panel —</span> Ethcon Korea 2024<a class="talk-link" href="https://2024.ethcon.kr/">↗</a>
       </div>
       <div class="talk">
-        <span class="pre">Speaker —</span> Crypto United Trading Conference<a class="talk-link" href="https://lu.ma/jg1vpimt">↗</a><a class="talk-link" href="https://docs.google.com/presentation/d/1iYd_cXJdAm77zsuI7cNLcnMsIJFRB8_5iISkScp6wh8/edit#slide=id.g2720ced5208_0_0">slides</a>
+        <span class="pre">Speaker —</span> Crypto United Trading Conference<a class="talk-link"
+          href="https://lu.ma/jg1vpimt">↗</a><a class="talk-link"
+          href="https://docs.google.com/presentation/d/1iYd_cXJdAm77zsuI7cNLcnMsIJFRB8_5iISkScp6wh8/edit#slide=id.g2720ced5208_0_0">slides</a>
       </div>
 
       <h3>2023</h3>
       <div class="talk">
-        <span class="pre">Speaker —</span> 웹 3.0과 프라이버시 및 DAO 운영의 법률적 검토 세미나<a class="talk-link" href="https://event-us.kr/coindeskkorea/event/69558?fbclid=IwAR1W1j0x1tk0yrA96aSZGaJ0oLsbTLoA77hcF8gGL2IpWEvNHMBaUx4Xm0M">↗</a>
+        <span class="pre">Speaker —</span> 웹 3.0과 프라이버시 및 DAO 운영의 법률적 검토 세미나<a class="talk-link"
+          href="https://event-us.kr/coindeskkorea/event/69558?fbclid=IwAR1W1j0x1tk0yrA96aSZGaJ0oLsbTLoA77hcF8gGL2IpWEvNHMBaUx4Xm0M">↗</a>
       </div>
       <div class="talk">
         <span class="pre">Panel —</span> Deference 2023<a class="talk-link" href="https://www.deference.co.kr/">↗</a>
@@ -767,13 +786,16 @@
         CodeChain Foundry<a class="talk-link" href="https://medium.com/codechain/codechain-foundry-8c6df5e08c82">↗</a>
       </div>
       <div class="talk">
-        remote-trait-object: CodeChain Foundry's core inter-module communication systems<a class="talk-link" href="https://medium.com/codechain/remote-trait-object-one-of-codechain-foundrys-core-inter-module-communication-systems-66879938b855">↗</a>
+        remote-trait-object: CodeChain Foundry's core inter-module communication systems<a class="talk-link"
+          href="https://medium.com/codechain/remote-trait-object-one-of-codechain-foundrys-core-inter-module-communication-systems-66879938b855">↗</a>
       </div>
       <div class="talk">
-        CodeChain Foundry ICS Implementation<a class="talk-link" href="https://medium.com/codechain/foundry-ics-poc-proof-of-concept-implementation-c92a8b4757da">↗</a>
+        CodeChain Foundry ICS Implementation<a class="talk-link"
+          href="https://medium.com/codechain/foundry-ics-poc-proof-of-concept-implementation-c92a8b4757da">↗</a>
       </div>
       <div class="talk">
-        Blockchain Light Client<a class="talk-link" href="https://medium.com/codechain/blockchain-light-client-1171dfa1269a">↗</a>
+        Blockchain Light Client<a class="talk-link"
+          href="https://medium.com/codechain/blockchain-light-client-1171dfa1269a">↗</a>
       </div>
       <div class="talk">
         IBC and ICS<a class="talk-link" href="https://medium.com/codechain/ibc-and-ics-116e636e57aa">↗</a>
@@ -838,7 +860,7 @@
       </div>
       <div class="f-line"></div>
       <div class="f-bottom">
-        <span>Built with bare hands</span>
+        <span>Everything is an illusion</span>
         <span class="pulse">Online</span>
       </div>
     </div>
