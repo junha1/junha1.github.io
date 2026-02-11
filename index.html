@@ -22,12 +22,7 @@
     :root {
       --bg: #eeeadf;
       --ink: #111;
-      --ink-2: #555;
-      --ink-3: #999;
-      --rule: #d6d2ca;
-      --blue: #1400ff;
-      --red: #ff2a00;
-      --lime: #c8ff00;
+      --accent: #ff2a00;
       --serif: 'DM Serif Display', Georgia, serif;
       --sans: 'Space Grotesk', sans-serif;
       --mono: 'JetBrains Mono', monospace;
@@ -56,19 +51,19 @@
     }
 
     ::selection {
-      background: var(--red);
+      background: var(--accent);
       color: var(--bg);
     }
 
     a {
-      color: var(--blue);
+      color: var(--accent);
       text-decoration: none;
-      border-bottom: 1.5px solid var(--blue);
+      border-bottom: 1.5px solid var(--accent);
       transition: background 0.1s, color 0.1s;
     }
 
     a:hover {
-      background: var(--blue);
+      background: var(--accent);
       color: var(--bg);
     }
 
@@ -83,7 +78,7 @@
     .star {
       position: fixed;
       font-size: 24px;
-      color: var(--red);
+      color: var(--accent);
       pointer-events: none;
       z-index: 10;
     }
@@ -115,7 +110,7 @@
       font-family: var(--serif);
       font-style: italic;
       font-size: 12px;
-      color: var(--red);
+      color: var(--accent);
       opacity: 0.5;
       writing-mode: vertical-rl;
       letter-spacing: 1px;
@@ -130,7 +125,7 @@
     .hero .num {
       font-family: var(--mono);
       font-size: 10px;
-      color: var(--ink-3);
+      color: rgba(17, 17, 17, 0.35);
       letter-spacing: 2px;
       margin-bottom: 12px;
       display: block;
@@ -152,7 +147,7 @@
       top: 3px;
       left: 3px;
       color: transparent;
-      -webkit-text-stroke: 1px var(--rule);
+      -webkit-text-stroke: 1px rgba(17, 17, 17, 0.08);
       z-index: -1;
       pointer-events: none;
     }
@@ -166,26 +161,17 @@
       position: relative;
     }
 
-    .hero .rule::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: 48px;
-      height: 4px;
-      background: var(--red);
-    }
 
     .hero .bio {
       font-size: 14px;
-      color: var(--ink-2);
+      color: rgba(17, 17, 17, 0.5);
       line-height: 1.65;
       max-width: 480px;
     }
 
     .hero .bio mark {
-      background: var(--lime);
-      color: var(--ink);
+      background: var(--accent);
+      color: var(--bg);
       padding: 0 4px;
       font-weight: 600;
     }
@@ -193,7 +179,7 @@
     .hero .stamp {
       font-family: var(--mono);
       font-size: 10px;
-      color: var(--ink-3);
+      color: rgba(17, 17, 17, 0.35);
       margin-top: 16px;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -222,23 +208,23 @@
       font-size: 9px;
       font-weight: 700;
       letter-spacing: 2px;
-      color: var(--red);
+      color: var(--accent);
       background: var(--bg);
       padding: 0 6px;
     }
 
     .contact-bar a {
-      color: var(--lime);
-      border-bottom: 1px solid rgba(200, 255, 0, 0.25);
+      color: var(--accent);
+      border-bottom: 1px solid rgba(255, 42, 0, 0.3);
     }
 
     .contact-bar a:hover {
-      background: var(--lime);
+      background: var(--accent);
       color: var(--ink);
     }
 
     .contact-bar .sep {
-      color: #444;
+      color: rgba(238, 234, 223, 0.25);
     }
 
     /* ===== SECTIONS ===== */
@@ -267,20 +253,11 @@
       font-style: italic;
       font-size: 14px;
       font-weight: 400;
-      color: var(--red);
+      color: var(--accent);
       letter-spacing: 0;
       text-transform: none;
     }
 
-    .sh .idx {
-      font-family: var(--mono);
-      font-size: 9px;
-      font-weight: 400;
-      color: var(--ink-3);
-      letter-spacing: 0;
-      text-transform: none;
-      margin-left: 8px;
-    }
 
     /* year markers */
     h3 {
@@ -296,13 +273,7 @@
     }
 
     h3::after {
-      content: "";
-      display: inline-block;
-      width: 24px;
-      height: 2px;
-      background: var(--red);
-      vertical-align: middle;
-      margin-left: 10px;
+      display: none;
     }
 
     h3:first-of-type {
@@ -316,7 +287,7 @@
       align-items: baseline;
       padding: 7px 0;
       font-size: 13px;
-      border-bottom: 1px solid var(--rule);
+      border-bottom: 1px solid rgba(17, 17, 17, 0.12);
     }
 
     .r:last-child {
@@ -326,7 +297,7 @@
     .r .d {
       font-family: var(--mono);
       font-size: 11px;
-      color: var(--ink-3);
+      color: rgba(17, 17, 17, 0.35);
       min-width: 74px;
       flex-shrink: 0;
     }
@@ -345,7 +316,7 @@
 
     /* ===== EDUCATION ===== */
     .edu {
-      border-left: 4px solid var(--red);
+      border-left: none;
       padding: 12px 16px;
       background: rgba(0, 0, 0, 0.03);
       font-size: 13px;
@@ -368,7 +339,7 @@
     .edu .yr {
       font-family: var(--mono);
       font-size: 10px;
-      color: var(--ink-3);
+      color: rgba(17, 17, 17, 0.35);
     }
 
     .edu .school {
@@ -389,7 +360,7 @@
     }
 
     .edu ul li {
-      color: var(--ink-2);
+      color: rgba(17, 17, 17, 0.5);
       padding: 1px 0;
     }
 
@@ -397,7 +368,7 @@
       content: "→ ";
       font-family: var(--mono);
       font-size: 11px;
-      color: var(--blue);
+      color: var(--accent);
     }
 
     /* ===== SKILLS ===== */
@@ -411,7 +382,8 @@
     }
 
     .skills .hi {
-      background: var(--lime);
+      background: var(--accent);
+      color: var(--bg);
       padding: 1px 5px;
     }
 
@@ -419,7 +391,7 @@
       display: block;
       margin-top: 10px;
       padding-top: 10px;
-      border-top: 1px solid var(--rule);
+      border-top: 1px solid rgba(17, 17, 17, 0.12);
       font-family: var(--serif);
       font-style: italic;
       font-weight: 400;
@@ -433,7 +405,7 @@
       font-style: normal;
       font-size: 9px;
       font-weight: 700;
-      color: var(--red);
+      color: var(--accent);
       letter-spacing: 2px;
       text-transform: uppercase;
       margin-right: 8px;
@@ -444,7 +416,7 @@
       padding: 5px 0;
       font-size: 13px;
       line-height: 1.5;
-      border-bottom: 1px solid var(--rule);
+      border-bottom: 1px solid rgba(17, 17, 17, 0.12);
     }
 
     .talk:last-child {
@@ -452,7 +424,7 @@
     }
 
     .talk .pre {
-      color: var(--ink-3);
+      color: rgba(17, 17, 17, 0.35);
       font-size: 12px;
     }
 
@@ -460,9 +432,9 @@
       font-family: var(--mono);
       font-size: 9px;
       font-weight: 700;
-      color: var(--blue);
-      border: 1.5px solid var(--blue);
-      border-bottom: 1.5px solid var(--blue);
+      color: var(--accent);
+      border: 1.5px solid var(--accent);
+      border-bottom: 1.5px solid var(--accent);
       padding: 1px 6px;
       margin-left: 6px;
       letter-spacing: 0.5px;
@@ -471,7 +443,7 @@
     }
 
     .talk-link:hover {
-      background: var(--blue);
+      background: var(--accent);
       color: var(--bg);
     }
 
@@ -482,7 +454,7 @@
       align-items: baseline;
       padding: 5px 0;
       font-size: 13px;
-      border-bottom: 1px solid var(--rule);
+      border-bottom: 1px solid rgba(17, 17, 17, 0.12);
     }
 
     .proj-list .proj-row:last-child {
@@ -498,7 +470,7 @@
     }
 
     .proj-list .pd {
-      color: var(--ink-2);
+      color: rgba(17, 17, 17, 0.5);
     }
 
     /* ===== COLOPHON ===== */
@@ -512,7 +484,7 @@
 
     .colophon .marquee-wrap {
       overflow: hidden;
-      border-bottom: 1px solid #222;
+      border-bottom: 1px solid rgba(238, 234, 223, 0.1);
     }
 
     .colophon .marquee {
@@ -528,13 +500,13 @@
       line-height: 1.2;
       padding: 12px 0;
       color: transparent;
-      -webkit-text-stroke: 1px #333;
+      -webkit-text-stroke: 1px rgba(238, 234, 223, 0.15);
       flex-shrink: 0;
       letter-spacing: -1px;
     }
 
     .colophon .marquee span .accent {
-      -webkit-text-stroke-color: var(--red);
+      -webkit-text-stroke-color: var(--accent);
     }
 
     @keyframes marquee {
@@ -570,7 +542,7 @@
     .colophon .f-sub {
       font-family: var(--mono);
       font-size: 9px;
-      color: #555;
+      color: rgba(238, 234, 223, 0.4);
     }
 
     .colophon .f-right {
@@ -583,14 +555,14 @@
       font-family: var(--serif);
       font-style: italic;
       font-size: 14px;
-      color: var(--lime);
+      color: var(--accent);
     }
 
     .colophon .pulse-dot {
       width: 7px;
       height: 7px;
       border-radius: 50%;
-      background: var(--lime);
+      background: var(--accent);
       animation: pulse 2s ease-in-out infinite;
     }
 
@@ -700,7 +672,7 @@
     </div>
 
     <section>
-      <div class="sh"><span>Work Experiences<span class="idx">01</span></span> <span class="deco">career</span></div>
+      <div class="sh"><span>Work Experiences</span> <span class="deco">career</span></div>
       <div class="r">
         <span class="d">2023–2026</span>
         <span class="t"><b>CTO and CISO</b>, <a href="https://hyperithm.com">Hyperithm</a></span>
@@ -724,7 +696,7 @@
     </section>
 
     <section>
-      <div class="sh"><span>Education<span class="idx">02</span></span> <span class="deco">alma mater</span></div>
+      <div class="sh"><span>Education</span> <span class="deco">alma mater</span></div>
       <div class="edu">
         <span class="yr">2016–2023</span>
         <div class="school"><a href="https://www.postech.ac.kr/">POSTECH</a></div>
@@ -736,7 +708,7 @@
     </section>
 
     <section>
-      <div class="sh"><span>Skills &amp; Interests<span class="idx">03</span></span> <span class="deco">things I care
+      <div class="sh"><span>Skills &amp; Interests</span> <span class="deco">things I care
           about</span></div>
       <div class="skills">
         Rust · <span class="hi">Blockchain</span> · Consensus · <span class="hi">Security</span> · <span class="hi">LLM
@@ -747,7 +719,7 @@
     </section>
 
     <section>
-      <div class="sh"><span>Postings &amp; Talks<span class="idx">04</span></span> <span class="deco">public</span>
+      <div class="sh"><span>Postings &amp; Talks</span> <span class="deco">public</span>
       </div>
 
       <h3>2026</h3>
@@ -826,7 +798,7 @@
     </section>
 
     <section>
-      <div class="sh"><span>Open-Source<span class="idx">05</span></span> <span class="deco">code</span></div>
+      <div class="sh"><span>Open-Source</span> <span class="deco">code</span></div>
       <div class="proj-list">
         <div class="proj-row">
           <span class="pn"><a href="https://github.com/postech-dao/simperby">Simperby</a></span>
@@ -848,7 +820,7 @@
     </section>
 
     <section>
-      <div class="sh"><span>Miscellaneous<span class="idx">06</span></span> <span class="deco">etc</span></div>
+      <div class="sh"><span>Miscellaneous</span> <span class="deco">etc</span></div>
       <div class="r">
         <span class="d sm">2023</span>
         <span class="t">Lead mentor, <a href="https://www.contribution.ac/">OSSCA 2023</a> — Ministry of Science and
