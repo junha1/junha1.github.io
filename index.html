@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
     rel="stylesheet">
   <style>
     *,
@@ -23,13 +23,12 @@
       --bg: #eeeadf;
       --ink: #111;
       --accent: #ff2a00;
-      --serif: 'DM Serif Display', Georgia, serif;
-      --sans: 'Space Grotesk', sans-serif;
-      --mono: 'JetBrains Mono', monospace;
+      --display: 'DM Serif Display', Georgia, serif;
+      --text: 'Lora', Georgia, serif;
     }
 
     body {
-      font-family: var(--sans);
+      font-family: var(--text);
       background: var(--bg);
       color: var(--ink);
       font-size: 14px;
@@ -107,7 +106,7 @@
     .margin-note {
       position: absolute;
       right: -140px;
-      font-family: var(--serif);
+      font-family: var(--display);
       font-style: italic;
       font-size: 12px;
       color: var(--accent);
@@ -123,7 +122,7 @@
     }
 
     .hero .num {
-      font-family: var(--mono);
+      font-family: var(--text);
       font-size: 10px;
       color: rgba(17, 17, 17, 0.35);
       letter-spacing: 2px;
@@ -132,7 +131,7 @@
     }
 
     .hero h1 {
-      font-family: var(--serif);
+      font-family: var(--display);
       font-size: 76px;
       font-weight: 400;
       font-style: italic;
@@ -177,7 +176,7 @@
     }
 
     .hero .stamp {
-      font-family: var(--mono);
+      font-family: var(--text);
       font-size: 10px;
       color: rgba(17, 17, 17, 0.35);
       margin-top: 16px;
@@ -189,7 +188,7 @@
     .contact-bar {
       background: var(--ink);
       color: var(--bg);
-      font-family: var(--mono);
+      font-family: var(--text);
       font-size: 11px;
       padding: 12px 16px;
       margin-bottom: 56px;
@@ -204,7 +203,7 @@
       position: absolute;
       top: -9px;
       left: 16px;
-      font-family: var(--mono);
+      font-family: var(--text);
       font-size: 9px;
       font-weight: 700;
       letter-spacing: 2px;
@@ -234,7 +233,7 @@
     }
 
     .sh {
-      font-family: var(--mono);
+      font-family: var(--text);
       font-size: 10px;
       font-weight: 700;
       text-transform: uppercase;
@@ -249,7 +248,7 @@
     }
 
     .sh .deco {
-      font-family: var(--serif);
+      font-family: var(--display);
       font-style: italic;
       font-size: 14px;
       font-weight: 400;
@@ -261,7 +260,7 @@
 
     /* year markers */
     h3 {
-      font-family: var(--serif);
+      font-family: var(--display);
       font-size: 16px;
       font-weight: 400;
       font-style: italic;
@@ -295,7 +294,7 @@
     }
 
     .r .d {
-      font-family: var(--mono);
+      font-family: var(--text);
       font-size: 11px;
       color: rgba(17, 17, 17, 0.35);
       min-width: 74px;
@@ -328,7 +327,7 @@
       position: absolute;
       top: 10px;
       right: 14px;
-      font-family: var(--serif);
+      font-family: var(--display);
       font-style: italic;
       font-size: 36px;
       color: var(--ink);
@@ -337,13 +336,13 @@
     }
 
     .edu .yr {
-      font-family: var(--mono);
+      font-family: var(--text);
       font-size: 10px;
       color: rgba(17, 17, 17, 0.35);
     }
 
     .edu .school {
-      font-family: var(--serif);
+      font-family: var(--display);
       font-size: 18px;
       font-weight: 400;
       margin-top: 2px;
@@ -366,14 +365,14 @@
 
     .edu ul li::before {
       content: "→ ";
-      font-family: var(--mono);
+      font-family: var(--text);
       font-size: 11px;
       color: var(--accent);
     }
 
     /* ===== SKILLS ===== */
     .skills {
-      font-family: var(--mono);
+      font-family: var(--text);
       font-size: 16px;
       font-weight: 700;
       letter-spacing: -0.3px;
@@ -392,7 +391,7 @@
       margin-top: 10px;
       padding-top: 10px;
       border-top: 1px solid rgba(17, 17, 17, 0.12);
-      font-family: var(--serif);
+      font-family: var(--display);
       font-style: italic;
       font-weight: 400;
       font-size: 15px;
@@ -401,7 +400,7 @@
     }
 
     .skills .sub-label {
-      font-family: var(--mono);
+      font-family: var(--text);
       font-style: normal;
       font-size: 9px;
       font-weight: 700;
@@ -429,7 +428,7 @@
     }
 
     .talk-link {
-      font-family: var(--mono);
+      font-family: var(--text);
       font-size: 9px;
       font-weight: 700;
       color: var(--accent);
@@ -462,7 +461,7 @@
     }
 
     .proj-list .pn {
-      font-family: var(--mono);
+      font-family: var(--text);
       font-size: 12px;
       font-weight: 700;
       min-width: 150px;
@@ -471,6 +470,55 @@
 
     .proj-list .pd {
       color: rgba(17, 17, 17, 0.5);
+    }
+
+    /* ===== MUSIC ===== */
+    .music-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .music-grid .vid {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding-bottom: 56.25%;
+      background: rgba(17, 17, 17, 0.06);
+      overflow: hidden;
+      border: none;
+      border-bottom: none;
+    }
+
+    .music-grid .vid img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .music-grid .vid::after {
+      content: "▶";
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.25);
+      transition: background 0.15s;
+    }
+
+    .music-grid .vid:hover::after {
+      background: rgba(255, 42, 0, 0.5);
+    }
+
+    @media (max-width: 600px) {
+      .music-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     /* ===== COLOPHON ===== */
@@ -489,12 +537,13 @@
 
     .colophon .marquee {
       display: flex;
+      width: max-content;
       white-space: nowrap;
       animation: marquee 20s linear infinite;
     }
 
     .colophon .marquee span {
-      font-family: var(--serif);
+      font-family: var(--display);
       font-style: italic;
       font-size: 48px;
       line-height: 1.2;
@@ -533,14 +582,14 @@
     }
 
     .colophon .f-copy {
-      font-family: var(--mono);
+      font-family: var(--text);
       font-size: 10px;
       letter-spacing: 1px;
       text-transform: uppercase;
     }
 
     .colophon .f-sub {
-      font-family: var(--mono);
+      font-family: var(--text);
       font-size: 9px;
       color: rgba(238, 234, 223, 0.4);
     }
@@ -552,7 +601,7 @@
     }
 
     .colophon .f-loc {
-      font-family: var(--serif);
+      font-family: var(--display);
       font-style: italic;
       font-size: 14px;
       color: var(--accent);
@@ -764,7 +813,8 @@
         PDAO Mainnet Genesis Ceremony<a class="talk-link" href="https://youtu.be/q8DRBNuxXWA">↗</a>
       </div>
       <div class="talk">
-        [POSTECH Tech Review] Blockchain &amp; the Decentralized Future<a class="talk-link" href="https://youtu.be/H1TYxoHzwTo">↗</a>
+        [POSTECH Tech Review] Blockchain &amp; the Decentralized Future<a class="talk-link"
+          href="https://youtu.be/H1TYxoHzwTo">↗</a>
       </div>
       <div class="talk">
         [PDAO Seminar] PoS &amp; BFT<a class="talk-link" href="https://youtu.be/2rgHBIlfI7M">↗</a>
@@ -845,6 +895,16 @@
       <div class="r">
         <span class="d sm">2014</span>
         <span class="t">Gold Award (2nd Place), Korean Olympiad in Informatics</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="sh"><span>Music</span> <span class="deco">my taste</span></div>
+      <div class="music-grid">
+        <a class="vid" href="https://www.youtube.com/watch?v=WtORTuLJw7o" target="_blank"><img src="https://img.youtube.com/vi/WtORTuLJw7o/hqdefault.jpg" alt=""></a>
+        <a class="vid" href="https://www.youtube.com/watch?v=LhUWJ6JGUrg" target="_blank"><img src="https://img.youtube.com/vi/LhUWJ6JGUrg/hqdefault.jpg" alt=""></a>
+        <a class="vid" href="https://www.youtube.com/watch?v=D2E86Z6nteg" target="_blank"><img src="https://img.youtube.com/vi/D2E86Z6nteg/hqdefault.jpg" alt=""></a>
+        <a class="vid" href="https://www.youtube.com/watch?v=UvtYEdYjkJM" target="_blank"><img src="https://img.youtube.com/vi/UvtYEdYjkJM/hqdefault.jpg" alt=""></a>
       </div>
     </section>
 
