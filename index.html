@@ -73,61 +73,10 @@
       position: relative;
     }
 
-    /* ===== FLOATING STARS ===== */
-    .star {
-      position: fixed;
-      font-size: 24px;
-      color: var(--accent);
-      pointer-events: none;
-      z-index: 10;
-    }
-
-    .star-1 {
-      top: 32px;
-      right: 32px;
-      animation: spin 20s linear infinite;
-    }
-
-    .star-2 {
-      bottom: 32px;
-      left: 32px;
-      font-size: 14px;
-      animation: spin 30s linear infinite reverse;
-      opacity: 0.4;
-    }
-
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    /* ===== MARGIN NOTE ===== */
-    .margin-note {
-      position: absolute;
-      right: -140px;
-      font-family: var(--display);
-      font-style: italic;
-      font-size: 12px;
-      color: var(--accent);
-      opacity: 0.5;
-      writing-mode: vertical-rl;
-      letter-spacing: 1px;
-    }
-
     /* ===== HERO ===== */
     .hero {
       margin-bottom: 56px;
       position: relative;
-    }
-
-    .hero .num {
-      font-family: var(--text);
-      font-size: 10px;
-      color: rgba(17, 17, 17, 0.35);
-      letter-spacing: 2px;
-      margin-bottom: 12px;
-      display: block;
     }
 
     .hero h1 {
@@ -171,7 +120,7 @@
     .hero .bio mark {
       background: var(--accent);
       color: var(--bg);
-      padding: 0 4px;
+      padding: 1px 5px;
       font-weight: 600;
     }
 
@@ -233,28 +182,14 @@
     }
 
     .sh {
-      font-family: var(--text);
-      font-size: 10px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      color: var(--ink);
-      border-top: 2.5px solid var(--ink);
-      padding-top: 8px;
-      margin-bottom: 16px;
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-
-    .sh .deco {
       font-family: var(--display);
       font-style: italic;
       font-size: 14px;
       font-weight: 400;
-      color: var(--accent);
-      letter-spacing: 0;
-      text-transform: none;
+      color: var(--ink);
+      border-top: 2.5px solid var(--ink);
+      padding-top: 8px;
+      margin-bottom: 16px;
     }
 
 
@@ -322,19 +257,6 @@
       position: relative;
     }
 
-    .edu::after {
-      content: "4.0";
-      position: absolute;
-      top: 10px;
-      right: 14px;
-      font-family: var(--display);
-      font-style: italic;
-      font-size: 36px;
-      color: var(--ink);
-      opacity: 0.06;
-      line-height: 1;
-    }
-
     .edu .yr {
       font-family: var(--text);
       font-size: 10px;
@@ -364,26 +286,18 @@
     }
 
     .edu ul li::before {
-      content: "→ ";
+      content: "— ";
       font-family: var(--text);
       font-size: 11px;
-      color: var(--accent);
+      color: rgba(17, 17, 17, 0.35);
     }
 
     /* ===== SKILLS ===== */
     .skills {
       font-family: var(--text);
-      font-size: 16px;
-      font-weight: 700;
-      letter-spacing: -0.3px;
+      font-size: 13px;
       line-height: 1.8;
       color: var(--ink);
-    }
-
-    .skills .hi {
-      background: var(--accent);
-      color: var(--bg);
-      padding: 1px 5px;
     }
 
     .skills .sub {
@@ -391,17 +305,9 @@
       margin-top: 10px;
       padding-top: 10px;
       border-top: 1px solid rgba(17, 17, 17, 0.12);
-      font-family: var(--display);
-      font-style: italic;
-      font-weight: 400;
-      font-size: 15px;
-      color: var(--ink);
-      letter-spacing: 0.5px;
     }
 
     .skills .sub-label {
-      font-family: var(--text);
-      font-style: normal;
       font-size: 9px;
       font-weight: 700;
       color: var(--accent);
@@ -594,46 +500,8 @@
       color: rgba(238, 234, 223, 0.4);
     }
 
-    .colophon .f-right {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .colophon .f-loc {
-      font-family: var(--display);
-      font-style: italic;
-      font-size: 14px;
-      color: var(--accent);
-    }
-
-    .colophon .pulse-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--accent);
-      animation: pulse 2s ease-in-out infinite;
-    }
-
-    @keyframes pulse {
-
-      0%,
-      100% {
-        opacity: 0.3;
-      }
-
-      50% {
-        opacity: 1;
-      }
-    }
 
     /* ===== RESPONSIVE ===== */
-    @media (max-width: 840px) {
-      .margin-note {
-        display: none;
-      }
-    }
-
     @media (max-width: 600px) {
       .page {
         padding: 48px 16px 64px;
@@ -667,34 +535,17 @@
         font-size: 14px;
       }
 
-      .star-1 {
-        top: 16px;
-        right: 16px;
-        font-size: 18px;
-      }
-
-      .star-2 {
-        bottom: 16px;
-        left: 16px;
-        font-size: 10px;
-      }
-
       h3 {
-        font-size: 18px;
+        font-size: 16px;
       }
     }
   </style>
 </head>
 
 <body>
-  <span class="star star-1">✦</span>
-  <span class="star star-2">✦</span>
   <div class="page">
 
-    <span class="margin-note" style="top: 100px;">yang junha — 양준하</span>
-
     <div class="hero">
-      <span class="num">001 / ∞</span>
       <h1>
         Junha<br>Yang
         <span class="ghost" aria-hidden="true">Junha<br>Yang</span>
@@ -705,7 +556,7 @@
         Open to any role, domain, or challenge.
         I embrace rapid technological transformation and challenge conventional paradigms to drive innovation.
       </p>
-      <div class="stamp">Last edited — 2026.02.10</div>
+      <div class="stamp">Last edited — 2026.03.15</div>
     </div>
 
     <div class="contact-bar">
@@ -721,7 +572,7 @@
     </div>
 
     <section>
-      <div class="sh"><span>Work Experiences</span> <span class="deco">career</span></div>
+      <div class="sh">career</div>
       <div class="r">
         <span class="d">2023–2026</span>
         <span class="t"><b>CTO and CISO</b>, <a href="https://hyperithm.com">Hyperithm</a></span>
@@ -745,7 +596,7 @@
     </section>
 
     <section>
-      <div class="sh"><span>Education</span> <span class="deco">alma mater</span></div>
+      <div class="sh">school</div>
       <div class="edu">
         <span class="yr">2016–2023</span>
         <div class="school"><a href="https://www.postech.ac.kr/">POSTECH</a></div>
@@ -757,19 +608,16 @@
     </section>
 
     <section>
-      <div class="sh"><span>Skills &amp; Interests</span> <span class="deco">things I care
-          about</span></div>
+      <div class="sh">things I care about</div>
       <div class="skills">
-        Rust · <span class="hi">Blockchain</span> · Consensus · <span class="hi">Security</span> · <span class="hi">LLM
-          Agent</span> · Vibe Coding · Systems Administration · HR
-        <span class="sub"><span class="sub-label">Also into</span>AGI · Euthanasia · Cosmic Void · Frutiger Aero ·
-          Music</span>
+        <span class="sub"><span class="sub-label">Systems</span>Blockchain · Rust · Consensus · Defensive Security</span>
+        <span class="sub"><span class="sub-label">Strategy</span>Alignment · AI Safety · Game Theory · Theory of Mind</span>
+        <span class="sub"><span class="sub-label">Life</span>Hiring · Euthanasia · Meditation · Music</span>
       </div>
     </section>
 
     <section>
-      <div class="sh"><span>Postings &amp; Talks</span> <span class="deco">public</span>
-      </div>
+      <div class="sh">public</div>
 
       <h3>2026</h3>
       <div class="talk">
@@ -848,7 +696,7 @@
     </section>
 
     <section>
-      <div class="sh"><span>Open-Source</span> <span class="deco">code</span></div>
+      <div class="sh">code</div>
       <div class="proj-list">
         <div class="proj-row">
           <span class="pn"><a href="https://github.com/postech-dao/simperby">Simperby</a></span>
@@ -870,7 +718,7 @@
     </section>
 
     <section>
-      <div class="sh"><span>Miscellaneous</span> <span class="deco">etc</span></div>
+      <div class="sh">etc</div>
       <div class="r">
         <span class="d sm">2023</span>
         <span class="t">Lead mentor, <a href="https://www.contribution.ac/">OSSCA 2023</a> — Ministry of Science and
@@ -899,7 +747,7 @@
     </section>
 
     <section>
-      <div class="sh"><span>Music</span> <span class="deco">my taste</span></div>
+      <div class="sh">my taste</div>
       <div class="music-grid">
         <a class="vid" href="https://www.youtube.com/watch?v=WtORTuLJw7o" target="_blank"><img src="https://img.youtube.com/vi/WtORTuLJw7o/hqdefault.jpg" alt=""></a>
         <a class="vid" href="https://www.youtube.com/watch?v=LhUWJ6JGUrg" target="_blank"><img src="https://img.youtube.com/vi/LhUWJ6JGUrg/hqdefault.jpg" alt=""></a>
@@ -923,10 +771,6 @@
         <div class="f-left">
           <span class="f-copy">&copy; 2026 Junha Yang</span>
           <span class="f-sub">Everything is an illusion</span>
-        </div>
-        <div class="f-right">
-          <span class="f-loc">Seoul</span>
-          <span class="pulse-dot"></span>
         </div>
       </div>
     </div>
